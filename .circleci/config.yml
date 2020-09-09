@@ -1,0 +1,15 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.21
+    steps:
+      - checkout
+      - run: echo 'Hello World!'
+      - run: npm install
+      - run: npm run build
+workflows:
+  version: 2
+  flows:
+    jobs:
+      - build
