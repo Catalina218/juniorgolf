@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import NavBreadcrumb from './components/NavBreadcrumb/NavBreadcrumb'
 import './App.css';
 
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <NavBreadcrumb/>
         <BrowserRouter>
           
         </BrowserRouter>

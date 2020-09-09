@@ -1,0 +1,23 @@
+.bread-color{
+    background: #E5E9EC;
+}
+.location-part{
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 30px;
+}
+.breadcrumb {
+    background-color: #E5E9EC;
+    border-radius: 0;
+}
+.breadcrumb-item  a{
+    color: #3788AF;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+}
+.breadcrumb li a:hover { 
+    text-decoration: none;
+}
+.breadcrumb >.active a{
+    color: black;
+ }
