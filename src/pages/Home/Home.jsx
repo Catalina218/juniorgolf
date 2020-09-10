@@ -1,55 +1,78 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Carousel, Card, Container, Row, Col, Image } from 'react-bootstrap';
+import ReactPlayer from 'react-player'
+import { storage } from '../../firebase';
+import '../../styles/Home.css';
 
 const Home = () => {
+  const [imageUrls, setImageUrls] = useState([]);
+  const [homeVideoUrl, setHomeVideoUrl] = useState("");
+  const storageRef = storage.ref();
+
+  const getImageUrl = async () => {
+    const imageRefs = await storageRef.child('images').listAll();
+    const imageNames = imageRefs.items.map(item => item.location.path);
+    const urlPromises = imageNames.map(name => {
+      return storageRef.child(name).getDownloadURL();
+    });
+    Promise.all(urlPromises).then(values => {
+      setImageUrls(values);
+    });
+  }
+
+  const getHomeVideo = async () => {
+    const videoRefs = await storageRef.child('videos').listAll();
+    const videoName = videoRefs.items[0].location.path;
+    const videoUrl = await storageRef.child(videoName).getDownloadURL();
+    setHomeVideoUrl(videoUrl);
+  }
+
+  useEffect(() => {
+    getImageUrl();
+    getHomeVideo();
+    // eslint-disable-next-line
+  }, []);
+
+  const leftArrow = <div className="carousel-arrow"><i class="fas fa-angle-left fa-5x" /></div>;
+  const rightArrow = <div className="carousel-arrow"><i class="fas fa-angle-right fa-5x" /></div>;
+
+  console.log(homeVideoUrl);
   return (
     <div>
-      <Carousel>
-        <Carousel.Item interval={1000}>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item interval={1000}>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item interval={1000}>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
+      <Carousel nextIcon={rightArrow} prevIcon={leftArrow}>
+        {
+          imageUrls.map((imageUrl, index) => {
+            return (
+              <Carousel.Item interval={1000} key={index}>
+                <img
+                  id="carousel-image"
+                  className="w-100"
+                  src={imageUrl}
+                  alt="First slide"
+                  height="300"
+                />
+              </Carousel.Item>
+            )
+          })
+        }
       </Carousel>
-      <Card style={{ width: '50rem' }}>
-        <Card.Body>
-          <Card.Title>Message</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
-          </Card.Text>
-        </Card.Body>
-      </Card>
+      <div className="card-video">
+        <Card style={{ width: '50rem' }} className="card">
+          <Card.Body>
+            <Card.Title className="card-title">Message</Card.Title>
+            <Card.Text>
+            Founder’s Message My name is Michael Chang, and I am the founder of this organization.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        <ReactPlayer 
+          url={homeVideoUrl}
+          playing
+          controls={true}
+          className="video-player"
+        />
+      </div>
+
       <Card>
         <Card.Body>
           <Card.Title style={{ border: "1px solid black" }}>Teaching Environment</Card.Title>
