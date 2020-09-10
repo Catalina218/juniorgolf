@@ -1,30 +1,30 @@
 import React from 'react';
-import { Navbar, NavDropdown, Nav, Image } from 'react-bootstrap';
-import Logo from '../../assets/logo.png';
+import { Navbar } from 'react-bootstrap';
+
+const style = {
+  icon:{
+    color: 	'#f7f7f7',
+    paddingLeft: "10px"
+  },
+  text:{
+    paddingLeft: "3px"
+  }
+}
 
 const Header = () => {
   return (
     <div>
-      <Navbar bg="dark">
-        <Navbar.Text className="text-light">Welcome to www.juniorgolf4fun.org</Navbar.Text>
-        <Navbar.Text className="text-primary">Michael Chang : 206-566-9216</Navbar.Text>
-      </Navbar>
-      <Navbar bg="light" expand="lg">
-        <Image src={Logo} />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#">About</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+      <Navbar bg="dark" className="container-fluid">
+        <Navbar.Text className="text-light offset-md-2">Welcome to www.juniorgolf4fun.org</Navbar.Text>
+        <Navbar.Text className="offset-md-3">     
+            <i class="fas fa-phone" style={style.icon}></i>
+            <a href="tel: 206-566-9216" className="text-primary" style={style.text}> 206-566-9216 </a>       
+        </Navbar.Text>
+        <Navbar.Text >
+          <i class="far fa-envelope" style={style.icon}></i>
+          <a href="mailto:m.chang1227@gmail.com" className="text-primary" style={style.text}> m.chang1227@gmail.coms</a> 
+        </Navbar.Text>
+      </Navbar>  
     </div>
   );
 }
