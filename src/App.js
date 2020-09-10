@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Navigation from './components/Navigation/Navigation'
 
+import Home from './pages/Home/Home';
 import './App.css';
 
 
@@ -16,7 +17,7 @@ class App extends Component {
         <Header/>
         <Navigation/>
         <BrowserRouter>
-        
+          <Route path="/" exact component={Home} />
         </BrowserRouter>
         <Footer />
       </div>
