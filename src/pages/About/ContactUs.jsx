@@ -6,7 +6,7 @@ import '../../styles/About.css';
 const ContactUs = () => {
   return (
     <div className="contact-us">
-      <Card style={{ width: '50rem' }}>
+      <Card className="about-card">
           <Card.Body>
             {
               contactTextArray.map((text, index) => {

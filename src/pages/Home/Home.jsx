@@ -7,7 +7,7 @@ import '../../styles/Home.css';
 
 const Home = () => {
   const [imageUrls, setImageUrls] = useState([]);
-  const [homeVideoUrl, setHomeVideoUrl] = useState("");
+  const [homeVideoUrls, setHomeVideoUrl] = useState([]);
   const storageRef = storage.ref();
 
   const getImageUrl = async () => {
@@ -23,9 +23,13 @@ const Home = () => {
 
   const getHomeVideo = async () => {
     const videoRefs = await storageRef.child('videos/Home').listAll();
-    const videoName = videoRefs.items[0].location.path;
-    const videoUrl = await storageRef.child(videoName).getDownloadURL();
-    setHomeVideoUrl(videoUrl);
+    const videoNames = videoRefs.items.map(item => item.location.path);
+    const urlPromises = videoNames.map(name => {
+      return storageRef.child(name).getDownloadURL();
+    })
+    Promise.all(urlPromises).then(values => {
+      setHomeVideoUrl(values);
+    });
   }
 
   useEffect(() => {
@@ -55,7 +59,7 @@ const Home = () => {
         }
       </Carousel>
       <div className="card-video">
-        <Card style={{ width: '50rem' }} className="card">
+        <Card className="home-card">
           <Card.Body>
             <Card.Title className="card-title">Message</Card.Title>
             {
@@ -69,12 +73,20 @@ const Home = () => {
             }
           </Card.Body>
         </Card>
-        <ReactPlayer 
-          url={homeVideoUrl}
-          playing
-          controls={true}
-          className="video-player"
-        />
+        <div className="video-section">
+          {
+            homeVideoUrls.map((homeVideoUrl, index) => {
+              return (
+                <ReactPlayer 
+                  url={homeVideoUrl}
+                  playing
+                  controls={true}
+                  className="video-player"
+                />
+              )
+            })
+          }
+        </div>
       </div>
 
       <Card>

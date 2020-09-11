@@ -1,0 +1,3 @@
+const clinicsText = "Junior Golf for Fun hosts free and fun golf clinics to introduce kids to the game of golf. Because of COVID-19, clinics have been postponed until circumstances are safer (most likely till January of 2021). If you are interested in participating in our clinics when they are reopened, please fill out the form below and we will send you email updates on possible future clinic dates.";
+
+export default clinicsText;

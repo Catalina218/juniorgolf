@@ -16,25 +16,22 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse expand="lg" id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <NavDropdown title="About" id="basic-nav-dropdown">
+            <Nav.Link href="/">HOME</Nav.Link>
+            <NavDropdown title="ABOUT" id="basic-nav-dropdown">
               <NavDropdown.Item href="about_us">About us</NavDropdown.Item>
               <NavDropdown.Item href="contact_us">Contact us</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#clinic">Golf Clinics</Nav.Link>
-            <NavDropdown title="Injury Prevention" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#stretching">Stretching</NavDropdown.Item>
-              <NavDropdown.Item href="#strengthening">
-                Strengthening Exercises
-              </NavDropdown.Item>
+            <Nav.Link href="clinics">GOLF CLINICS</Nav.Link>
+            <NavDropdown title="INJURY PREVENTION" id="basic-nav-dropdown">
+              <NavDropdown.Item href="stretching">Stretching</NavDropdown.Item>
+              <NavDropdown.Item href="strengthening">Strengthening Exercises</NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Our Team" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#coach">Coaching Team</NavDropdown.Item>
-              <NavDropdown.Item href="#advisor">Advisors</NavDropdown.Item>
+            <NavDropdown title="OUR TEAM" id="basic-nav-dropdown">
+              <NavDropdown.Item href="coach">Coaching Team</NavDropdown.Item>
+              <NavDropdown.Item href="advisor">Advisors</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#message">Message</Nav.Link>
-            <Nav.Link href="#partner">Partner</Nav.Link>
-            <Nav.Link href="#enviorment">Teaching Enviorment</Nav.Link>
+            <Nav.Link href="message">FOUNDER'S MESSAGE</Nav.Link>
+            <Nav.Link href="partners">PARTNER</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

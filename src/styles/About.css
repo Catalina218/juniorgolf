@@ -2,6 +2,13 @@
   margin-top: 5rem;
 }
 
+.about-card {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: none;
+}
+
 .contact-us {
   margin-top: 5rem;
 }

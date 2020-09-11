@@ -1,15 +1,15 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import { aboutTextArray } from '../../assets/AboutText';
-import '../../styles/About.css';
+import { messageTextArray } from '../../assets/MessageText';
+import '../../styles/Message.css';
 
-const AboutUs = () => {
+const Message = () => {
   return (
-    <div className="about-us">
-      <Card className="about-card">
+    <div>
+      <Card className="message-card">
           <Card.Body>
             {
-              aboutTextArray.map((text, index) => {
+              messageTextArray.map((text, index) => {
                 return (
                   <Card.Text key={index}>
                     {text}
@@ -20,7 +20,7 @@ const AboutUs = () => {
           </Card.Body>
         </Card>
     </div>
-  );
+  )
 }
 
-export default AboutUs;
+export default Message;

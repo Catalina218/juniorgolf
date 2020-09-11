@@ -17,10 +17,11 @@
   display: flex;
 }
 
-.card {
+.home-card {
   margin-left: auto;
   margin-right: auto;
   border: none;
+  width: 40%;
 }
 
 .card-title {
@@ -28,6 +29,12 @@
   color: #0984e3;
 }
 
+.video-section {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
 .video-player {
-  margin: auto;
+  margin-bottom: 5%;
 }
