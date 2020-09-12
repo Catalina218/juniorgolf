@@ -12,7 +12,7 @@ const Home = () => {
   const storageRef = storage.ref();
 
   const getImageUrl = async () => {
-    const imageRefs = await storageRef.child('images').listAll();
+    const imageRefs = await storageRef.child('home').listAll();
     const imageNames = imageRefs.items.map(item => item.location.path);
     const urlPromises = imageNames.map(name => {
       return storageRef.child(name).getDownloadURL();
