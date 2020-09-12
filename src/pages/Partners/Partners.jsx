@@ -1,12 +1,13 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 import '../../styles/Partners.css';
 
 const Partners = () => {
   return (
-    <div>
-      <Card className="partners-card">
-          <Card.Body>
+    <div className="partner">
+      <Container>
+        <Card className="partners-card" >
+          <Card.Body >
             <Card.Title className="partner-title">
               Coach Dave Emerick/NCJGA:
             </Card.Title>
@@ -46,6 +47,7 @@ const Partners = () => {
             </Card.Text>
           </Card.Body>
         </Card>
+      </Container>
     </div>
   )
 }

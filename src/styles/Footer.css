@@ -3,18 +3,20 @@
   display: flex;
   flex-direction: column;
   background-color: #34495e;
+  padding-top: 10px;
+  
 }
 
 .footer p {
   color: #ffffff;
+  font-size: small;
+
 }
 
 .copyright {
   background-color: #ffffff;
+  font-size: small;
+  line-height: 35px;
+  color: black;
 }
 
-.copyright p {
-  color: #000000;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}

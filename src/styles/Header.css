@@ -1,0 +1,25 @@
+.icon {
+    color: 	#f7f7f7;
+    padding-left: 10px;
+    font-size: small;
+}
+
+.text-primary {
+    padding-left: 3px;
+    font-size: small;
+}
+
+.text-sec {
+    font-size: small;
+}
+
+.nav {
+    height: 30px;
+}
+
+@media only screen and (max-width: 1100px) {
+    /* For desktop: */
+    .text-sec {
+        display: none;
+    }
+  }

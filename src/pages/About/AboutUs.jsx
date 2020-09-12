@@ -1,11 +1,12 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 import { aboutTextArray } from '../../assets/AboutText';
 import '../../styles/About.css';
 
 const AboutUs = () => {
   return (
     <div className="about-us">
+      <Container>
       <Card className="about-card">
           <Card.Body>
             {
@@ -19,6 +20,7 @@ const AboutUs = () => {
             }
           </Card.Body>
         </Card>
+      </Container>
     </div>
   );
 }

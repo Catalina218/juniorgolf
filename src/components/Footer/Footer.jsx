@@ -8,7 +8,7 @@ const Footer = () => {
       <p>Email: m.chang1227@gmail.coms</p>
       <p>Phone: 206-566-9216</p>
       <div className="copyright">
-        <p>Copyright © 2002-2017 Juniorgolf4fun.org</p>
+        Copyright © 2002-2017 Juniorgolf4fun.org
       </div>
     </footer>
   );

@@ -1,12 +1,13 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Container } from 'react-bootstrap';
 import { messageTextArray } from '../../assets/MessageText';
 import '../../styles/Message.css';
 
 const Message = () => {
   return (
-    <div>
-      <Card className="message-card">
+    <div className="message">
+      <Container>
+        <Card className="message-card">
           <Card.Body>
             {
               messageTextArray.map((text, index) => {
@@ -19,6 +20,7 @@ const Message = () => {
             }
           </Card.Body>
         </Card>
+      </Container>
     </div>
   )
 }

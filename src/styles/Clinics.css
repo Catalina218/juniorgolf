@@ -1,6 +1,15 @@
+.clinic {
+  margin-top: 3rem;
+}
+
 .clinics-card {
-  width: 50%;
   margin-left: auto;
   margin-right: auto;
   border: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .clinics-card {
+    width: 90%;
+  }
 }

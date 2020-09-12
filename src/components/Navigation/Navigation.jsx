@@ -1,20 +1,17 @@
 import React from "react";
 import { Navbar, NavDropdown, Nav, Image } from "react-bootstrap";
 import Logo from "../../assets/logo.png";
-
-const style = {
-  logo: {
-    marginRight: "5%",
-  },
-};
+import '../../styles/Navigation.css';
 
 const Navigation = () => {
   return (
     <div className="sticky-top">
       <Navbar bg="light" expand="lg">
-        <Image src={Logo} style={style.logo} className="offset-md-2" />
+        <Nav.Link href="/" className="offset-xl-2 logo">
+          <Image src={Logo}/>
+        </Nav.Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse expand="lg" id="basic-navbar-nav">
+        <Navbar.Collapse expand="xl" id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/">HOME</Nav.Link>
             <NavDropdown title="ABOUT" id="basic-nav-dropdown">
