@@ -15,7 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height:100%; 
   position:relative; 
-  padding-bottom: 150px 
+  padding-bottom: 0px;
 }
 .footer { 
     position: absolute; 

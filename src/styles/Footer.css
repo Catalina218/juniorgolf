@@ -1,11 +1,18 @@
 .footer {
   background-color: #485460;
+  width: 100vw;
+  height:auto;
+  margin-top: 100px;
+  position: relative;
+}
+.left-text{
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .footer-contact {
   color: #ffffff;
-  height: 250px;
-  width: 50%;
+  height: auto;
   padding-top: 30px;
   padding-bottom: 30px;
   margin: auto;
@@ -13,7 +20,9 @@
   display: flex;
   justify-content: space-around;
 }
-
+.footer-container{
+  margin:auto;
+}
 .footer-title {
   color: #1e90ff;
   font-size: larger;
@@ -24,7 +33,11 @@
 }
 
 .footer-image {
-  object-fit: cover;
+  width: 65%;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 .copyright {
@@ -33,6 +46,11 @@
   line-height: 50px;
   color: black;
   text-align: center;
+  height:50px;
+  margin-bottom: 0px;
+  position: relative;
+  border:none;
+
 }
 
 .footer-svg {
@@ -42,8 +60,36 @@
   margin-right: 10px;
 }
 
-@media only screen and (max-width: 768px) {
+@media  screen and (max-width: 768px) {
+  .footer-image{
+    width:100%;
+  }
+}
+
+@media  screen and (max-width: 576px) {
   .copyright {
     font-size: small;
   }
+  .footer-text{
+    font-size:1px;
+  }
+  .footer-image{
+    width:80%;
+    margin-left:10%;
+  }
+  .left-text{
+    margin-left: 10%;
+  }
+
+}
+@media  screen and (max-width: 450px) {
+  .footer{
+    margin-top:50px;
+  }
+
+
+}
+
+.body{
+  min-height: auto;
 }

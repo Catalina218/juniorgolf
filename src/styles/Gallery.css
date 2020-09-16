@@ -1,7 +1,7 @@
 .box {
   position: relative;
-  width: 20em;
-  height: 14em;
+  width: 300px;
+  height: 200px;
   line-height: 10em;
   overflow: hidden;
   margin-top: 5em;
@@ -100,15 +100,11 @@ i {
   transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 1000px) {
-  .box {
-    width:28rem;
-    height:20rem;
-
-  }
-}
 .container-fluid {
   width: 100vw;
+  min-width: 320px;
+
+
 }
 
 .gallery-container {
@@ -124,3 +120,15 @@ background: -moz-linear-gradient(top left, #3c6382 0%, #53e3a6 100%);
 background: -o-linear-gradient(top left, #3c6382 0%, #53e3a6 100%);
 background: linear-gradient(to bottom right, #3c6382 0%, #53e3a6 100%);*/
 
+
+@media screen and (max-width: 450px){
+  .box{
+    width: 250px;
+    height: 160px;
+    margin-top:50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+}

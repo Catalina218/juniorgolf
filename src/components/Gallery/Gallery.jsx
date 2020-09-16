@@ -29,9 +29,9 @@ const Gallery = () => {
 
   const responsive = {
     0: { items: 1 },
-    500: { items: 2 },
-    1000: { items: 3 },
-    1500: { items: 4 },
+    750: { items: 2 },
+    1200: { items: 3 },
+    1600: { items: 4 },
 	};
 	
   const stagePadding = {
