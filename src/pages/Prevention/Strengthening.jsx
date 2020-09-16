@@ -38,7 +38,7 @@ const Strengthening = () => {
             itemUrls.map((url, index) => {
               if (typeArray[index]) {
                 return (
-                  <Col className="player-wrapper" sm="10" md="6" lg="4" >
+                  <Col className="player-wrapper" xs="12" md="6" lg="4" >
                     <ReactPlayer 
                       url={url}
                       controls
@@ -53,7 +53,7 @@ const Strengthening = () => {
                 )
               } else {
                 return (
-                  <Col className="stretching-image-wrapper" sm="10" md="6" lg="4">
+                  <Col className="stretching-image-wrapper" xs="12" md="6" lg="4">
                     <Image 
                       src={url}
                       className="stretching-image"
