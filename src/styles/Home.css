@@ -64,3 +64,16 @@
 .video-player {
   margin-bottom: 5%;
 }
+
+@media only screen and (max-width: 775px){
+  .card-video {
+    flex-direction: column;
+  }
+  .home-card {
+    width: 80%;
+  }
+  .home-carousel-image{
+    width: 100%;
+    height: 250px;
+  }
+}

@@ -58,11 +58,11 @@ const Home = () => {
           </Spinner>
         </div>
       </div> :
-      <Carousel nextIcon={rightArrow} prevIcon={leftArrow}>
+      <Carousel nextIcon={rightArrow} prevIcon={leftArrow} className="home-carousel">
         {
           imageUrls.map((imageUrl, index) => {
             return (
-              <Carousel.Item interval={1000} key={index}>
+              <Carousel.Item interval={1000} key={index} className="home-carousel-image">
                 <img
                   id="carousel-image"
                   src={imageUrl}
@@ -102,6 +102,7 @@ const Home = () => {
                   url={homeVideoUrl}
                   playing
                   controls={true}
+                  width={window.screen.width >= 750 ? "640px" : "100%"}
                   className="video-player"
                 />
               )
@@ -109,7 +110,7 @@ const Home = () => {
           }
         </div>
       </div>
-      <Gallery/>
+      <Gallery/> 
     </div>
   );
 }
