@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Media } from 'react-bootstrap';
+import { Media, Card } from 'react-bootstrap';
 import { storage } from '../../firebase';
 import { advisorTextArray } from '../../assets/TeamText';
 import '../../styles/Team.css';
@@ -24,29 +24,61 @@ const Advisor = () => {
     // eslint-disable-next-line
   }, []);
 
-  return (
-    <div className="coach-section">
+  const renderMedia = (arr, textArr) => {
+    return (
       <ul className="list-inline">
       {
-        imageUrls.map((imageUrl, index) => {
+        arr.map((imageUrl, index) => {
           return (
             <Media as="li" key={index} className="coach-media">
               <img
-                width={400}
-                height={400}
                 className="mr-3 coach-image"
                 src={imageUrl}
                 alt="Generic placeholder"
               />
               <Media.Body>
-                <h5>{advisorTextArray[index].title}</h5>
-                <p>{advisorTextArray[index].text}</p>
+                <h5>{textArr[index].title}</h5>
+                <p>{textArr[index].text}</p>
               </Media.Body>
             </Media>
           )
         })
       }
       </ul>
+    );
+  }
+
+  const renderCard = (arr, textArr) => {
+    return (
+      <>
+        {
+          arr.map((imageUrl, index) => {
+            return (
+              <Card key={index} className="team-card">
+                <Card.Img 
+                  variant="top"
+                  src={imageUrl}
+                  className="team-card-image"
+                />
+                <Card.Body>
+                  <Card.Title className="team-card-title">{textArr[index].title}</Card.Title>
+                  <Card.Text className="team-card-text">{textArr[index].text}</Card.Text>
+                </Card.Body>
+              </Card>
+            )
+          })
+        }
+      </>
+    )
+  }
+
+  return (
+    <div className="coach-section">
+      {
+        window.screen.width >= 900 ?
+        renderMedia(imageUrls, advisorTextArray) :
+        renderCard(imageUrls, advisorTextArray)
+      }
     </div>
   )
 }
