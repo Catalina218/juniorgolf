@@ -12,7 +12,6 @@ const Home = () => {
   const [homeVideoUrls, setHomeVideoUrl] = useState([]);
   const storageRef = storage.ref();
   const videoCoverUrl1 = 'https://firebasestorage.googleapis.com/v0/b/junior-golf-72925.appspot.com/o/video-1-min.png?alt=media&token=1d840b4e-f0b4-4ab8-af68-3ff94b3ce89a';
-  const videoCoverUrl2 = 'https://firebasestorage.googleapis.com/v0/b/junior-golf-72925.appspot.com/o/video-2-min.png?alt=media&token=1c818719-7590-474a-8569-f2cbd9481f18';
 
   const getImageUrl = async () => {
     const imageRefs = await storageRef.child('home').listAll();
@@ -101,7 +100,7 @@ const Home = () => {
             homeVideoUrls.map((homeVideoUrl, index) => {
               return (
                 <ReactPlayer
-                  light={index === 0 ? videoCoverUrl1 : videoCoverUrl2}
+                  light={index === 0 ? videoCoverUrl1 : null}
                   key={index}
                   url={homeVideoUrl}
                   controls={true}
