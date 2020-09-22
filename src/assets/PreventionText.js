@@ -16,8 +16,8 @@ const strengtheningArray = [
   "Dead Bugs",
   "Bear Crawls(Forward)",
   "Bear Crawls(Side)",
-  "Plank",
   "Side Plank",
+  "Plank",
   "Monster Walks(Forward)",
   "Monster Walks(Side)"
 ];
