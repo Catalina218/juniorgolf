@@ -77,4 +77,7 @@
     height: 250px;
     object-fit: cover;
   }
+  .home-image-text {
+    font-size: 25px;
+  }
 }
