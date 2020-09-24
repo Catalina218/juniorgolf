@@ -8,8 +8,17 @@
   border: none;
 }
 
+.clinics-image {
+  margin-top: 10%;
+}
+
+.clinics-spinner {
+  text-align: center;
+  line-height: 300px;
+}
+
 @media only screen and (min-width: 768px) {
   .clinics-card {
-    width: 90%;
+    width: 80%;
   }
 }
