@@ -16,7 +16,7 @@ const coachTextArray = [
     text: "James Whitworth is a 16 year old golfer from Carlsbad, California. He is a junior at Pacific Ridge School and has been playing golf for ten years, making a lot of friends along the way. He enjoys the grind of tournament golf and working hard to try to improve his game. Along with playing golf James enjoys watching golf and other sports as well. Additionally, he played competitive soccer for 5 years when he was younger and played Junior Varsity basketball his sophomore year of high school."
   },
   {
-    title: "Nolan Agresti",
+    title: "Nolan Agresti, Assistant President",
     text: "Nolan is a 16 year old sophomore at Pacific Ridge School. He has been playing golf for three years. Nolan loves the game of golf because it is a safe yet challenging sport that teaches valuable lessons you can use in the real world. Nolan has played in many tournaments and made his way onto the Pacific Ridge School golf team. Additionally, Nolan has experience in teaching younger kids the fundamentals of soccer, and he looks forward to teaching kids golf as well."
   },
   {
