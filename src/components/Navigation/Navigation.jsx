@@ -49,7 +49,7 @@ const Navigation = () => {
               <NavDropdown.Item href="stretching" className="nav-dropitem">Stretching</NavDropdown.Item>
               <NavDropdown.Item href="strengthening" className="nav-dropitem">Strengthening Exercises</NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="OUR TEAM" id="basic-nav-dropdown" className="nav-item">
+            <NavDropdown title="COACHING TEAM" id="basic-nav-dropdown" className="nav-item">
               <NavDropdown.Item href="coach" className="nav-dropitem">Coaching Team</NavDropdown.Item>
               <NavDropdown.Item href="advisor" className="nav-dropitem">Advisors</NavDropdown.Item>
             </NavDropdown>

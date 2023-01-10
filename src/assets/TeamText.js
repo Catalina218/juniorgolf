@@ -1,22 +1,22 @@
 const coachTextArray = [
   {
-    title: "Michael Chang, Founder/President",
+    title: "Michael Chang, Founder",
     text: "Michael Chang is a 17 year old junior at Pacific Ridge School. He has been playing competitive golf for five years and really enjoys the sport. Through his experience with golf, he realized that a lot of kids don’t have the opportunities to play the sport. Because of this, he wanted to create a way to help kids from all backgrounds play golf.During his years of golf, Michael injured his back, so he also aims to educate other kids in preventing injuries and learning from his experience."
   },
   {
-    title: "Kenny Zhang, Vice President",
+    title: "Kenny Zhang, Coach",
     text: "Kenny Zhang is a junior at Canyon Crest Academy. He has played competitive golf for eight years and really enjoys the game. He enjoys golfing with his friends as well as the competitive nature of the sport. Through this organization, Kenny wants to help share this joy with others and provide more students a chance to play golf."
   },
   {
-    title: "Dylan Oyama, Vice President",
+    title: "Dylan Oyama, Coach",
     text: "Dylan Oyama is 16 years old and he is a junior at Pacific Ridge School. He has been playing competitive golf for 11 years and is on the Pacific Ridge School golf team. Throughout his junior golf career he has won SDJGA, Toyota Tour Cup, and AJGA events. He loves the sport of golf and the finesse you need to play. He is excited to teach it to others."
   },
   {
-    title: "James Whitworth, Vice President",
+    title: "James Whitworth, Coach",
     text: "James Whitworth is a 16 year old golfer from Carlsbad, California. He is a junior at Pacific Ridge School and has been playing golf for ten years, making a lot of friends along the way. He enjoys the grind of tournament golf and working hard to try to improve his game. Along with playing golf James enjoys watching golf and other sports as well. Additionally, he played competitive soccer for 5 years when he was younger and played Junior Varsity basketball his sophomore year of high school."
   },
   {
-    title: "Nolan Agresti, Assistant President",
+    title: "Nolan Agresti, President",
     text: "Nolan is a 16 year old sophomore at Pacific Ridge School. He has been playing golf for three years. Nolan loves the game of golf because it is a safe yet challenging sport that teaches valuable lessons you can use in the real world. Nolan has played in many tournaments and made his way onto the Pacific Ridge School golf team. Additionally, Nolan has experience in teaching younger kids the fundamentals of soccer, and he looks forward to teaching kids golf as well."
   },
   {
@@ -26,6 +26,18 @@ const coachTextArray = [
   {
     title: "James Whitworth & Gerry Chang, Students",
     text: "James Whitworth (left), high school junior, Gerry Chang (right), high school freshman. They are both students at Pacific Ridge School in Carlsbad, California. They were the champion and runner-up respectively of North County Junior Golf Association’s Toyota Tour Cup Qualifier tournament during this COVID-19 period of 2020."
+  },
+  {
+    title: "Bryce Hamlet, Vice President",
+    text: ""
+  },
+  {
+    title: "Thomas Benjamin, Vice President",
+    text: ""
+  },
+  {
+    title: "Jack Hamel, Vice President",
+    text: ""
   }
 ];
 
